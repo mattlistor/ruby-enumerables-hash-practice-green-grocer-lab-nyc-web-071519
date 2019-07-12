@@ -27,7 +27,7 @@ def apply_coupons(cart, coupons)
       end 
     end 
   end 
-  cart 
+  return cart 
 end
 
 def apply_clearance(cart)
@@ -37,7 +37,7 @@ def apply_clearance(cart)
       priceHash[:price] = priceHash[:price].round(2)
     end
   end
-  cart
+  return cart
 end
 
 def checkout(items, coupons)
