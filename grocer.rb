@@ -13,28 +13,6 @@ def consolidate_cart(cart)
   return newCart
 end
 
-#def apply_coupons(cart, coupons)
-#  coupons.each do |couponHash|
-#    item = couponHash[:item]
-#    newCartItemHash = {
-#      :price => couponHash[:cost],
-#      :clearance => true,
-#      :count => couponHash[:num]
-#    }
-#    if cart.include?(item)
-#      newCartItemHash[:price] = couponHash[:cost] / couponHash[:num]
-#      if cart[item][:count] >= couponHash[:num]
-#        cart[item][:count] = cart[item][:count] - couponHash[:num]
-#        #if cart[item][:count] = 0
-#          #cart.delete(item)
-#        #end
-#      end
-#      cart[item + "W/ COUPON"] = newCartItemHash
-#    end 
-#  end
-#  return cart
-#end
-
 def apply_coupons(cart, coupons) 
   coupons.each do |couponHash| 
     item = couponHash[:item] 
