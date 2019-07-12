@@ -53,5 +53,6 @@ def checkout(items, coupons)
   if priceTotal > 100 
     priceTotal-= priceTotal * 0.1
   end
+  
   return priceTotal 
 end
