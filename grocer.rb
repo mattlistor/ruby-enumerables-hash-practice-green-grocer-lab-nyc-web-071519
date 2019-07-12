@@ -45,13 +45,14 @@ def checkout(items, coupons)
   couponedCart = apply_coupons(colsolidatedCart, coupons)
   finalCart = apply_clearance(couponedCart)
   
-  total = 0
+  priceTotal = 0
   finalCart.each do |name, priceHash|
-    total += priceHash[:price] * priceHash[:count]
+    priceTotal += priceHash[:price] * priceHash[:count]
   end
-  if total > 100 
-    return total * 0.9
+  
+  if priceTotal > 100 
+    return priceTotal * 0.9
   else 
-    return total 
+    return priceTotal 
   end
 end
