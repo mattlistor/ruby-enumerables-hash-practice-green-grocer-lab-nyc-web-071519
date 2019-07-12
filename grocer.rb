@@ -16,8 +16,8 @@ end
 def apply_coupons(cart, coupons) 
   coupons.each do |couponHash| 
     item = couponHash[:item] 
-    if cart[item] && cart[item][:count] >= couponHash[:num] 
-      if cart[item + " W/COUPON"] 
+    if cart.include?(item) && cart[item][:count] >= couponHash[:num] 
+      if cart.include?(item + " W/COUPON")
         cart[item + " W/COUPON"][:count] += couponHash[:num] 
       else 
         cart[item + " W/COUPON"] = {:price => (couponHash[:cost]/couponHash[:num]), 
