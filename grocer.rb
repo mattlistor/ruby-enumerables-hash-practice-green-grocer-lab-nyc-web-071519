@@ -51,7 +51,7 @@ def checkout(items, coupons)
   end
   
   if priceTotal > 100 
-    return priceTotal * 0.9
+  priceTotal-= (priceHash[:price] * 0.2)
   else 
     return priceTotal 
   end
